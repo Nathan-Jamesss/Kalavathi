@@ -27,7 +27,7 @@ git submodule update --init --recursive
 
 ## Hosted Vercel preview
 
-See [VERCEL.md](docs/VERCEL.md) for the hosted three-tab URLs and cloud setup. The hosted demo uses private shared storage and two-second polling. Its state is separate from the local hardware demo.
+[Open the hosted preview](https://kalavathi-5thti5jsg-nathan-james-projects-bdd2da12.vercel.app) (Vercel sign-in required). See [VERCEL.md](docs/VERCEL.md) for the hosted three-tab URLs and cloud setup. The hosted demo uses private shared storage and two-second polling. Its state is separate from the local hardware demo.
 
 ## The three tabs
 

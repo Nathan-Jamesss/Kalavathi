@@ -1,5 +1,9 @@
 # Vercel preview deployment
 
+Ready preview: https://kalavathi-5thti5jsg-nathan-james-projects-bdd2da12.vercel.app
+
+Vercel sign-in protection remains enabled. This preview was confirmed Ready through deployment inspection. Local tests and the real private-store workflow were checked; the deployed application itself was not fetched by the deployment task.
+
 The hosted preview serves all three interfaces from one Vercel project. Replace `BASE_URL` with the preview URL:
 
 | Role | URL |
@@ -34,7 +38,7 @@ No paid-plan upgrade is configured. Hosting and Blob use are subject to the acco
 For local work after cloning, run `npm ci`. To deploy a new preview from a linked checkout:
 
 ```powershell
-vercel deploy --yes --no-wait --scope nathan-james-projects-bdd2da12
+vercel deploy --target preview --yes --no-wait --scope nathan-james-projects-bdd2da12
 ```
 
 Then use `vercel inspect DEPLOYMENT_URL --scope nathan-james-projects-bdd2da12` to check readiness. Do not select production unless deliberately setting up its storage connection too.
