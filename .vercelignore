@@ -1,0 +1,16 @@
+data
+.git
+.gstack
+*-browser
+vendor
+node_modules
+.env*
+docs
+hardware
+firmware
+components
+test
+*.jpg
+*.jpeg
+*.png
+*.docx

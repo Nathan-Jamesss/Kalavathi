@@ -30,7 +30,7 @@
   function connectState(kind){
     connection=kind;online=['live','polling','mock'].includes(kind);
     const banner=$('hospital-connection');banner.hidden=kind==='mock'||kind==='live';banner.classList.toggle('offline',kind==='offline');
-    banner.textContent=kind==='offline'?'Offline. Reconnecting — decisions disabled.':kind==='polling'?'Connected by polling · reconnecting live updates…':'Connecting to hospital service…';
+    banner.textContent=kind==='offline'?'Offline. Reconnecting — decisions disabled.':kind==='polling'?(document.body.dataset.transport==='polling'?'Connected · updates every 2 s':'Connected by polling · reconnecting live updates…'):'Connecting to hospital service…';
     if(!online)abortHold();updateControls();
   }
   function updateControls(){
@@ -185,6 +185,7 @@
   function reconnect(){startPolling();if(!retryTimer&&!stopped)retryTimer=setTimeout(()=>{retryTimer=null;connect();},Math.min(1000*2**retries++,10000));}
   function connect(){
     if(stopped)return;
+    if(document.body.dataset.transport==='polling'){startPolling();return;}
     try{socket=new WebSocket((location.protocol==='https:'?'wss://':'ws://')+location.host+'/ws/hospital/'+encodeURIComponent(hospitalId));socket.onopen=()=>{retries=0;};socket.onmessage=e=>{try{ingest(JSON.parse(e.data));version++;connectState('live');clearTimeout(pollTimer);pollTimer=null;}catch{socket.close();}};socket.onerror=()=>{startPolling();socket.close();};socket.onclose=()=>{if(stopped)return;if(connection==='live')connectState('connecting');reconnect();};}catch{reconnect();}
   }
   if(mock){$('hospital-demo').hidden=false;$('hospital-demo').open=false;$('demo-disclosure').hidden=false;accepting=true;connectState('mock');render();$('inject').onclick=()=>{const item=fixtures.make($('demo-case').value,++sequence);if($('demo-case').value==='cancelled'&&selected()){const request=selected();request.status='cancelled';request.reason='Cancelled by the driver.';ingest(requests);return;}ingest([item,...requests]);};$('offline-demo').onclick=()=>connectState(online?'offline':'mock');}

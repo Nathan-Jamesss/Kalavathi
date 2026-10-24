@@ -38,9 +38,9 @@
     connection=kind;online=['live','polling','mock'].includes(kind);
     const banner=$('connection-banner');banner.hidden=kind==='live'||kind==='mock';
     banner.classList.toggle('offline',kind==='offline');
-    banner.textContent=kind==='offline'?'Offline. Reconnecting…':kind==='polling'?'Reconnecting live updates…':kind==='connecting'?'Connecting to traffic control…':'Reconnecting…';
+    banner.textContent=kind==='offline'?'Offline. Reconnecting…':kind==='polling'?(document.body.dataset.transport==='polling'?'Connected · updates every 2 s':'Reconnecting live updates…'):kind==='connecting'?'Connecting to traffic control…':'Reconnecting…';
     $('connection-dot').className='connection-dot '+(kind==='live'||kind==='mock'?'green':kind==='offline'?'red':'');
-    $('connection-label').textContent=kind==='live'?'Connected':kind==='polling'?'Connected by polling; reconnecting live updates':kind;
+    $('connection-label').textContent=kind==='live'?'Connected':kind==='polling'?(document.body.dataset.transport==='polling'?'Connected; updates every 2 seconds':'Connected by polling; reconnecting live updates'):kind;
     if(!online)abortHold();
     updateButtons();updateDetails();
   }
@@ -249,6 +249,7 @@
   }
   function connect(){
     if(stopped)return;
+    if(document.body.dataset.transport==='polling'){startPolling();return;}
     try{
       socket=new WebSocket((location.protocol==='https:'?'wss://':'ws://')+location.host+'/ws/driver/'+encodeURIComponent(deviceId));
       socket.onopen=()=>{retries=0;};

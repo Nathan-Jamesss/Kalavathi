@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "regions": ["bom1"],
+  "builds": [{"src": "api/cloud.js", "use": "@vercel/node", "config": {"includeFiles": ["templates/**", "static/**", "public/**"]}}],
+  "routes": [{"src": "/(.*)", "dest": "/api/cloud.js"}]
+}

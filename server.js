@@ -5,18 +5,19 @@ const crypto=require('node:crypto');
 const {Demo,save}=require('./lib/demo');
 const {Workflow}=require('./lib/workflow');
 
-function createApp({dataDir=path.join(__dirname,'data'),clock=Date.now,demoMode=false}={}){
+function createApp({dataDir=path.join(__dirname,'data'),clock=Date.now,demoMode=false,stateStore=null}={}){
   const configFile=path.join(dataDir,'config.json');
-  const config=fs.existsSync(configFile)?JSON.parse(fs.readFileSync(configFile,'utf8')):
+  const config=(stateStore?stateStore.read('config'):fs.existsSync(configFile)?JSON.parse(fs.readFileSync(configFile,'utf8')):null)||
     {deviceKey:crypto.randomBytes(24).toString('hex'),operatorKey:crypto.randomBytes(18).toString('hex')};
-  if(!fs.existsSync(configFile))save(configFile,config);
-  const demo=new Demo(path.join(dataDir,'state.json'),clock);
-  const workflow=new Workflow(path.join(dataDir,'workflow.json'),demo,clock);
+  if(stateStore)stateStore.write('config',config);else if(!fs.existsSync(configFile))save(configFile,config);
+  const demo=new Demo(path.join(dataDir,'state.json'),clock,{store:stateStore,resume:!!stateStore});
+  const workflow=new Workflow(path.join(dataDir,'workflow.json'),demo,clock,{store:stateStore,resume:!!stateStore});
+  if(stateStore)workflow.lease=stateStore.read('lease');
   const sessionsFile=path.join(dataDir,'demo-sessions.json');
-  const sessions=new Map(demoMode&&fs.existsSync(sessionsFile)?JSON.parse(fs.readFileSync(sessionsFile,'utf8')).filter(([,s])=>s.until>clock()):[]);
+  const sessions=new Map((demoMode?(stateStore?stateStore.read('sessions')||[]:fs.existsSync(sessionsFile)?JSON.parse(fs.readFileSync(sessionsFile,'utf8')):[]):[]).filter(([,s])=>s.until>clock()));
   function cookieName(role,id){return 'kalavathi-'+role+(role==='hospital'?'-'+encodeURIComponent(id):'');}
   function cookie(req,role,id){const match=(req.headers.cookie||'').split(';').map(x=>x.trim()).find(x=>x.startsWith(cookieName(role,id)+'='));return match?.split('=')[1];}
-  function mint(req,res,role,id){if(!demoMode)return;const old=sessions.get(cookie(req,role,id));if(old&&old.id===id&&old.role===role&&old.until>clock())return;const token=crypto.randomBytes(24).toString('hex');sessions.set(token,{role,id,until:clock()+12*3600000});save(sessionsFile,[...sessions]);res.setHeader('Set-Cookie',`${cookieName(role,id)}=${token}; HttpOnly; SameSite=Strict; Path=/; Max-Age=43200`);}
+  function mint(req,res,role,id){if(!demoMode)return;const old=sessions.get(cookie(req,role,id));if(old&&old.id===id&&old.role===role&&old.until>clock())return;const token=crypto.randomBytes(24).toString('hex');sessions.set(token,{role,id,until:clock()+12*3600000});if(stateStore)stateStore.write('sessions',[...sessions]);else save(sessionsFile,[...sessions]);res.setHeader('Set-Cookie',`${cookieName(role,id)}=${token}; HttpOnly; SameSite=Strict; Path=/; Max-Age=43200${stateStore?'; Secure':''}`);}
   function roleAllowed(req,role,id){if(!demoMode)return false;const s=sessions.get(cookie(req,role,id));return !!s&&s.until>clock()&&s.role===role&&(id===undefined||s.id===id);}
   let deviceSeen=0;
   const staticFiles={'/traffic':'index.html','/hospital-legacy':'index.html','/app.js':'app.js','/style.css':'style.css'};
@@ -57,18 +58,18 @@ function createApp({dataDir=path.join(__dirname,'data'),clock=Date.now,demoMode=
       if(req.method==='GET'&&url.pathname==='/')return reply(200,fs.readFileSync(path.join(__dirname,'templates','home.html'),'utf8'),'text/html');
       if(req.method==='GET'&&(/^\/hospital(?:\/[^/]+)?\/?$/.test(url.pathname))){
         mint(req,res,'hospital',url.pathname.split('/')[2]||'city');
-        return reply(200,fs.readFileSync(path.join(__dirname,'templates','hospital.html'),'utf8'),'text/html');
+        return reply(200,fs.readFileSync(path.join(__dirname,'templates','hospital.html'),'utf8').replace('<body>',stateStore?'<body data-transport="polling">':'<body>'),'text/html');
       }
       if(req.method==='GET'&&(/^\/driver(?:\/[^/]+)?\/?$/.test(url.pathname))){
         mint(req,res,'driver',url.pathname.split('/')[2]||'kalavathi-01');
-        return reply(200,fs.readFileSync(path.join(__dirname,'templates','driver.html'),'utf8'),'text/html');
+        return reply(200,fs.readFileSync(path.join(__dirname,'templates','driver.html'),'utf8').replace('<body>',stateStore?'<body data-transport="polling">':'<body>'),'text/html');
       }
       if(req.method==='GET'&&url.pathname==='/traffic'){res.writeHead(302,{Location:'/traffic/'});return res.end();}
       if(req.method==='GET'&&url.pathname.startsWith('/traffic/')){
         const name=url.pathname.slice('/traffic/'.length)||'index.html';
         if(!/^(?:[a-zA-Z0-9_-]+\.(?:html|js|css)|lib\/[a-zA-Z0-9_.-]+\.(?:js|css|ttf|woff2))$/.test(name)||['config.example.js'].includes(name))return reply(404,{error:'Not found'});
         const file=path.join(__dirname,'static','digital-twin',name);if(!fs.existsSync(file))return reply(404,{error:'Not found'});
-        mint(req,res,'traffic','network');const ext=path.extname(file),type={'.html':'text/html','.js':'text/javascript','.css':'text/css','.ttf':'font/ttf','.woff2':'font/woff2'}[ext];
+        if(name.endsWith('.html'))mint(req,res,'traffic','network');const ext=path.extname(file),type={'.html':'text/html','.js':'text/javascript','.css':'text/css','.ttf':'font/ttf','.woff2':'font/woff2'}[ext];
         return reply(200,fs.readFileSync(file),type,true);
       }
       const driverAssets={'/static/driver.css':['driver.css','text/css'],'/static/driver.js':['driver.js','text/javascript'],'/static/driver-fixtures.js':['driver-fixtures.js','text/javascript']};
@@ -126,7 +127,7 @@ function createApp({dataDir=path.join(__dirname,'data'),clock=Date.now,demoMode=
     const client={socket,role:m[1],id:m[2],last:null};sockets.add(client);socket.on('error',()=>sockets.delete(client));socket.on('close',()=>sockets.delete(client));socket.on('data',data=>{if((data[0]&15)===8)socket.end();else if(data.length>8192)socket.destroy();});
   });
   function broadcast(){for(const client of sockets){try{const data=JSON.stringify(client.role==='driver'?workflow.driver(client.id):workflow.incoming(client.id));if(data===client.last)continue;client.last=data;const payload=Buffer.from(data);let header;if(payload.length<126)header=Buffer.from([129,payload.length]);else if(payload.length<65536)header=Buffer.from([129,126,payload.length>>8,payload.length&255]);else{header=Buffer.alloc(10);header[0]=129;header[1]=127;header.writeBigUInt64BE(BigInt(payload.length),2);}if(client.socket.writableLength>65536){client.socket.destroy();continue;}client.socket.write(Buffer.concat([header,payload]));}catch{client.socket.destroy();}}}
-  const timer=setInterval(()=>{demo.tick();workflow.tick();broadcast();},250);timer.unref();server.on('close',()=>{clearInterval(timer);for(const {socket} of sockets)socket.destroy();});
+  const timer=stateStore?null:setInterval(()=>{demo.tick();workflow.tick();broadcast();},250);timer?.unref();server.on('close',()=>{clearInterval(timer);for(const {socket} of sockets)socket.destroy();});
   return {server,config,demo,workflow};
 }
 if(require.main===module){

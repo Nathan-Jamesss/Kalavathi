@@ -6,11 +6,12 @@ The **patient, hospital and traffic interfaces share one backend, token, route a
 
 ## Start the project
 
-Requirements: **Node.js 20 or newer**, Git, and a browser. The web server has no npm package dependencies and no frontend build step.
+Requirements: **Node.js 20 or newer**, Git, and a browser. The local web server uses Node built-ins. Run `npm ci` to install the Vercel storage SDK used by hosted deployments. There is no frontend build step.
 
 ```powershell
 git clone --recurse-submodules https://github.com/Nathan-Jamesss/Kalavathi.git
 cd Kalavathi
+npm ci
 npm run demo
 ```
 
@@ -23,6 +24,10 @@ git submodule update --init --recursive
 ```
 
 `npm start` also starts the application, on port **8000** by default. The examples below use `npm run demo` and port **8010** consistently. Do not start a second server on a port already in use.
+
+## Hosted Vercel preview
+
+See [VERCEL.md](docs/VERCEL.md) for the hosted three-tab URLs and cloud setup. The hosted demo uses private shared storage and two-second polling. Its state is separate from the local hardware demo.
 
 ## The three tabs
 
