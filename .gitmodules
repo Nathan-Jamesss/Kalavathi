@@ -1,0 +1,3 @@
+[submodule "vendor/DigitalTwinGenesis"]
+	path = vendor/DigitalTwinGenesis
+	url = https://github.com/satyatanmayi/DigitalTwinGenesis.git

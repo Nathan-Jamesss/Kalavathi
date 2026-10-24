@@ -1,0 +1,12 @@
+data/
+.gstack/
+*-browser/
+node_modules/
+*.log
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+Thumbs.db

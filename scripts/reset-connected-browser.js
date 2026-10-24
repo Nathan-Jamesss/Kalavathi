@@ -1,0 +1,1 @@
+return await (async()=>{const r=await fetch('/api/traffic/reset',{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'});if(!r.ok)throw Error('Reset failed');return JSON.stringify({reset:true});})();

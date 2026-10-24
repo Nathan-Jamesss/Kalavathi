@@ -1,0 +1,30 @@
+{
+  "passed": 25,
+  "checks": [
+    "No horizontal overflow: Idle",
+    "56 px controls: Idle",
+    "No horizontal overflow: Pending",
+    "56 px controls: Pending",
+    "No horizontal overflow: Granted",
+    "56 px controls: Granted",
+    "No horizontal overflow: Redirected",
+    "56 px controls: Redirected",
+    "No horizontal overflow: Refused",
+    "56 px controls: Refused",
+    "No horizontal overflow: Expired",
+    "56 px controls: Expired",
+    "No horizontal overflow: Arrived",
+    "56 px controls: Arrived",
+    "Full-screen hospital picker opens",
+    "Capable hospitals listed",
+    "Hospital change returns to pending",
+    "Short hold does not cancel",
+    "Two-second hold cancels in mock mode",
+    "Expiry returns to idle after ten seconds",
+    "Fifteen-second change window locks",
+    "Offline banner visible",
+    "Offline action disabled",
+    "No remote script or stylesheet",
+    "No request-start button"
+  ]
+}

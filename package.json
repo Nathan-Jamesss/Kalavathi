@@ -1,0 +1,14 @@
+{
+  "name": "kalavathi-tabletop",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "demo": "node scripts/preview-driver.js",
+    "test": "node scripts/test.cjs",
+    "check:source": "node scripts/check-twin-source.cjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

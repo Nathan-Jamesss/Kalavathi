@@ -1,0 +1,1684 @@
+{
+  "simulator": "CircuitJS at https://www.falstad.com/circuit/circuitjs.html",
+  "date": "2026-10-21",
+  "models": "Generic NPN and LED. Buzzer represented by 250 ohm load. Ideal regulated supplies. GPS/RF/firmware not modelled.",
+  "results": [
+    {
+      "name": "buzzer-on",
+      "kind": "driver",
+      "simTime": 0.01572999999999948,
+      "elements": [
+        {
+          "type": "VoltageElm",
+          "volts": [
+            0,
+            3.3
+          ],
+          "current": 0.0026217045610846404,
+          "info": [
+            "voltage source",
+            "I = 2.622 mA",
+            "Vd = 3.3 V",
+            "P = -8.652 mW"
+          ]
+        },
+        {
+          "type": "ResistorElm",
+          "volts": [
+            3.3,
+            0.6782954389153594
+          ],
+          "current": 0.0026217045610846404,
+          "info": [
+            "resistor",
+            "I = 2.622 mA",
+            "Vd = 2.622 V",
+            "R = 1 kΩ",
+            "P = 6.873 mW"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0.6782954389153594,
+            0.6782954389153594
+          ],
+          "current": 0.0026217045610846404,
+          "info": [
+            "wire",
+            "I = 2.622 mA",
+            "V = 678.295 mV"
+          ]
+        },
+        {
+          "type": "ResistorElm",
+          "volts": [
+            0.6782954389153594,
+            0
+          ],
+          "current": 0.000006782954389153594,
+          "info": [
+            "resistor",
+            "I = 6.783 μA",
+            "Vd = 678.295 mV",
+            "R = 100 kΩ",
+            "P = 4.601 μW"
+          ]
+        },
+        {
+          "type": "TransistorElm",
+          "volts": [
+            0.6782954389153594,
+            0.06041381760092699,
+            0
+          ],
+          "current": 0,
+          "info": [
+            "transistor (NPN)",
+            "default, β=100",
+            "saturation",
+            "Ic = 19.758 mA",
+            "Ib = 2.615 mA",
+            "Vbe = 678.295 mV",
+            "Vbc = 617.882 mV",
+            "Vce = 60.414 mV",
+            "P = 2.967 mW"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0,
+            0
+          ],
+          "current": 0.022373266336291622,
+          "info": [
+            "wire",
+            "I = 22.373 mA",
+            "V = 0 V"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0,
+            0
+          ],
+          "current": 0.002614921606695332,
+          "info": [
+            "wire",
+            "I = 2.615 mA",
+            "V = 0 V"
+          ]
+        },
+        {
+          "type": "GroundElm",
+          "volts": [
+            0
+          ],
+          "current": -0.00000678295438930835,
+          "info": [
+            "ground",
+            "I = -6.783 μA"
+          ]
+        },
+        {
+          "type": "VoltageElm",
+          "volts": [
+            0,
+            5
+          ],
+          "current": 0.01975834472959629,
+          "info": [
+            "voltage source",
+            "I = 19.758 mA",
+            "Vd = 5 V",
+            "P = -98.792 mW"
+          ]
+        },
+        {
+          "type": "ResistorElm",
+          "volts": [
+            5,
+            0.06041381760092699
+          ],
+          "current": 0.01975834472959629,
+          "info": [
+            "resistor",
+            "I = 19.758 mA",
+            "Vd = 4.94 V",
+            "R = 250 Ω",
+            "P = 97.598 mW"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0.06041381760092699,
+            0.06041381760092699
+          ],
+          "current": 0.01975834472959629,
+          "info": [
+            "wire",
+            "I = 19.758 mA",
+            "V = 60.414 mV"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0,
+            0
+          ],
+          "current": -0.01975834472959629,
+          "info": [
+            "wire",
+            "I = 19.758 mA",
+            "V = 0 V"
+          ]
+        },
+        {
+          "type": "GroundElm",
+          "volts": [
+            0
+          ],
+          "current": 0.000006782954389153594,
+          "info": [
+            "ground",
+            "I = 6.783 μA"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "buzzer-off",
+      "kind": "driver",
+      "simTime": 0.015779999999999496,
+      "elements": [
+        {
+          "type": "VoltageElm",
+          "volts": [
+            0,
+            0
+          ],
+          "current": -5.049504942727499e-12,
+          "info": [
+            "voltage source",
+            "I = -5.05 pA",
+            "Vd = 0 V",
+            "P = 0 W"
+          ]
+        },
+        {
+          "type": "ResistorElm",
+          "volts": [
+            0,
+            5.049504942727499e-9
+          ],
+          "current": -5.049504942727499e-12,
+          "info": [
+            "resistor",
+            "I = 5.05 pA",
+            "Vd = 5.05 nV",
+            "R = 1 kΩ",
+            "P = 0 W"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            5.049504942727499e-9,
+            5.049504942727499e-9
+          ],
+          "current": -5.049504942727499e-12,
+          "info": [
+            "wire",
+            "I = 5.05 pA",
+            "V = 5.05 nV"
+          ]
+        },
+        {
+          "type": "ResistorElm",
+          "volts": [
+            5.049504942727499e-9,
+            0
+          ],
+          "current": 5.049504942727499e-14,
+          "info": [
+            "resistor",
+            "I = 0.05 pA",
+            "Vd = 5.05 nV",
+            "R = 100 kΩ",
+            "P = 0 W"
+          ]
+        },
+        {
+          "type": "TransistorElm",
+          "volts": [
+            5.049504942727499e-9,
+            4.99999999745,
+            0
+          ],
+          "current": 0,
+          "info": [
+            "transistor (NPN)",
+            "default, β=100",
+            "cutoff",
+            "Ic = 10.2 pA",
+            "Ib = -5.1 pA",
+            "Vbe = 5.05 nV",
+            "Vbc = -5 V",
+            "Vce = 5 V",
+            "P = 51 pW"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0,
+            0
+          ],
+          "current": 5.100000017218262e-12,
+          "info": [
+            "wire",
+            "I = 5.1 pA",
+            "V = 0 V"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0,
+            0
+          ],
+          "current": -5.100000549177765e-12,
+          "info": [
+            "wire",
+            "I = 5.1 pA",
+            "V = 0 V"
+          ]
+        },
+        {
+          "type": "GroundElm",
+          "volts": [
+            0
+          ],
+          "current": -5.049560645026568e-14,
+          "info": [
+            "ground",
+            "I = -0.05 pA"
+          ]
+        },
+        {
+          "type": "VoltageElm",
+          "volts": [
+            0,
+            5
+          ],
+          "current": 1.0200000566396026e-11,
+          "info": [
+            "voltage source",
+            "I = 10.2 pA",
+            "Vd = 5 V",
+            "P = -51 pW"
+          ]
+        },
+        {
+          "type": "ResistorElm",
+          "volts": [
+            5,
+            4.99999999745
+          ],
+          "current": 1.0200000843951784e-11,
+          "info": [
+            "resistor",
+            "I = 10.2 pA",
+            "Vd = 2.55 nV",
+            "R = 250 Ω",
+            "P = 0 W"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            4.99999999745,
+            4.99999999745
+          ],
+          "current": 1.0200000843951784e-11,
+          "info": [
+            "wire",
+            "I = 10.2 pA",
+            "V = 5 V"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0,
+            0
+          ],
+          "current": -1.0200000566396026e-11,
+          "info": [
+            "wire",
+            "I = 10.2 pA",
+            "V = 0 V"
+          ]
+        },
+        {
+          "type": "GroundElm",
+          "volts": [
+            0
+          ],
+          "current": 5.049504942727499e-14,
+          "info": [
+            "ground",
+            "I = 0.05 pA"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "buzzer-low-gain",
+      "kind": "driver",
+      "simTime": 0.015654999999999458,
+      "elements": [
+        {
+          "type": "VoltageElm",
+          "volts": [
+            0,
+            3.3
+          ],
+          "current": 0.0026222148094386696,
+          "info": [
+            "voltage source",
+            "I = 2.622 mA",
+            "Vd = 3.3 V",
+            "P = -8.653 mW"
+          ]
+        },
+        {
+          "type": "ResistorElm",
+          "volts": [
+            3.3,
+            0.6777851905613298
+          ],
+          "current": 0.00262221480943867,
+          "info": [
+            "resistor",
+            "I = 2.622 mA",
+            "Vd = 2.622 V",
+            "R = 1 kΩ",
+            "P = 6.876 mW"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0.6777851905613298,
+            0.6777851905613298
+          ],
+          "current": 0.00262221480943867,
+          "info": [
+            "wire",
+            "I = 2.622 mA",
+            "V = 677.785 mV"
+          ]
+        },
+        {
+          "type": "ResistorElm",
+          "volts": [
+            0.6777851905613298,
+            0
+          ],
+          "current": 0.000006777851905613298,
+          "info": [
+            "resistor",
+            "I = 6.778 μA",
+            "Vd = 677.785 mV",
+            "R = 100 kΩ",
+            "P = 4.594 μW"
+          ]
+        },
+        {
+          "type": "TransistorElm",
+          "volts": [
+            0.6777851905613298,
+            0.06260328968655848,
+            0
+          ],
+          "current": 0,
+          "info": [
+            "transistor (NPN)",
+            "default, β=50",
+            "saturation",
+            "Ic = 19.75 mA",
+            "Ib = 2.615 mA",
+            "Vbe = 677.785 mV",
+            "Vbc = 615.182 mV",
+            "Vce = 62.603 mV",
+            "P = 3.009 mW"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0,
+            0
+          ],
+          "current": 0.022365023798786726,
+          "info": [
+            "wire",
+            "I = 22.365 mA",
+            "V = 0 V"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0,
+            0
+          ],
+          "current": 0.002615436957532958,
+          "info": [
+            "wire",
+            "I = 2.615 mA",
+            "V = 0 V"
+          ]
+        },
+        {
+          "type": "GroundElm",
+          "volts": [
+            0
+          ],
+          "current": -0.000006777851905711684,
+          "info": [
+            "ground",
+            "I = -6.778 μA"
+          ]
+        },
+        {
+          "type": "VoltageElm",
+          "volts": [
+            0,
+            5
+          ],
+          "current": 0.019749586841253768,
+          "info": [
+            "voltage source",
+            "I = 19.75 mA",
+            "Vd = 5 V",
+            "P = -98.748 mW"
+          ]
+        },
+        {
+          "type": "ResistorElm",
+          "volts": [
+            5,
+            0.06260328968655848
+          ],
+          "current": 0.019749586841253768,
+          "info": [
+            "resistor",
+            "I = 19.75 mA",
+            "Vd = 4.937 V",
+            "R = 250 Ω",
+            "P = 97.512 mW"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0.06260328968655848,
+            0.06260328968655848
+          ],
+          "current": 0.019749586841253768,
+          "info": [
+            "wire",
+            "I = 19.75 mA",
+            "V = 62.603 mV"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0,
+            0
+          ],
+          "current": -0.019749586841253768,
+          "info": [
+            "wire",
+            "I = 19.75 mA",
+            "V = 0 V"
+          ]
+        },
+        {
+          "type": "GroundElm",
+          "volts": [
+            0
+          ],
+          "current": 0.000006777851905613298,
+          "info": [
+            "ground",
+            "I = 6.778 μA"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "buzzer-high-gain",
+      "kind": "driver",
+      "simTime": 0.015734999999999482,
+      "elements": [
+        {
+          "type": "VoltageElm",
+          "volts": [
+            0,
+            3.3
+          ],
+          "current": 0.002621359303408283,
+          "info": [
+            "voltage source",
+            "I = 2.621 mA",
+            "Vd = 3.3 V",
+            "P = -8.65 mW"
+          ]
+        },
+        {
+          "type": "ResistorElm",
+          "volts": [
+            3.3,
+            0.6786406965917169
+          ],
+          "current": 0.002621359303408283,
+          "info": [
+            "resistor",
+            "I = 2.621 mA",
+            "Vd = 2.621 V",
+            "R = 1 kΩ",
+            "P = 6.872 mW"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0.6786406965917169,
+            0.6786406965917169
+          ],
+          "current": 0.002621359303408283,
+          "info": [
+            "wire",
+            "I = 2.621 mA",
+            "V = 678.641 mV"
+          ]
+        },
+        {
+          "type": "ResistorElm",
+          "volts": [
+            0.6786406965917169,
+            0
+          ],
+          "current": 0.000006786406965917169,
+          "info": [
+            "resistor",
+            "I = 6.786 μA",
+            "Vd = 678.641 mV",
+            "R = 100 kΩ",
+            "P = 4.606 μW"
+          ]
+        },
+        {
+          "type": "TransistorElm",
+          "volts": [
+            0.6786406965917169,
+            0.05905012340428104,
+            0
+          ],
+          "current": 0,
+          "info": [
+            "transistor (NPN)",
+            "default, β=300",
+            "saturation",
+            "Ic = 19.764 mA",
+            "Ib = 2.615 mA",
+            "Vbe = 678.641 mV",
+            "Vbc = 619.591 mV",
+            "Vce = 59.05 mV",
+            "P = 2.941 mW"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0,
+            0
+          ],
+          "current": 0.022378372402825114,
+          "info": [
+            "wire",
+            "I = 22.378 mA",
+            "V = 0 V"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0,
+            0
+          ],
+          "current": 0.002614572896442239,
+          "info": [
+            "wire",
+            "I = 2.615 mA",
+            "V = 0 V"
+          ]
+        },
+        {
+          "type": "GroundElm",
+          "volts": [
+            0
+          ],
+          "current": -0.000006786406966044142,
+          "info": [
+            "ground",
+            "I = -6.786 μA"
+          ]
+        },
+        {
+          "type": "VoltageElm",
+          "volts": [
+            0,
+            5
+          ],
+          "current": 0.019763799506382875,
+          "info": [
+            "voltage source",
+            "I = 19.764 mA",
+            "Vd = 5 V",
+            "P = -98.819 mW"
+          ]
+        },
+        {
+          "type": "ResistorElm",
+          "volts": [
+            5,
+            0.05905012340428104
+          ],
+          "current": 0.01976379950638288,
+          "info": [
+            "resistor",
+            "I = 19.764 mA",
+            "Vd = 4.941 V",
+            "R = 250 Ω",
+            "P = 97.652 mW"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0.05905012340428104,
+            0.05905012340428104
+          ],
+          "current": 0.01976379950638288,
+          "info": [
+            "wire",
+            "I = 19.764 mA",
+            "V = 59.05 mV"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0,
+            0
+          ],
+          "current": -0.019763799506382875,
+          "info": [
+            "wire",
+            "I = 19.764 mA",
+            "V = 0 V"
+          ]
+        },
+        {
+          "type": "GroundElm",
+          "volts": [
+            0
+          ],
+          "current": 0.000006786406965917169,
+          "info": [
+            "ground",
+            "I = 6.786 μA"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "buzzer-low-supply",
+      "kind": "driver",
+      "simTime": 0.015624999999999448,
+      "elements": [
+        {
+          "type": "VoltageElm",
+          "volts": [
+            0,
+            3.3
+          ],
+          "current": 0.002498608688082704,
+          "info": [
+            "voltage source",
+            "I = 2.499 mA",
+            "Vd = 3.3 V",
+            "P = -8.245 mW"
+          ]
+        },
+        {
+          "type": "ResistorElm",
+          "volts": [
+            3.3,
+            0.6764608775131609
+          ],
+          "current": 0.002498608688082704,
+          "info": [
+            "resistor",
+            "I = 2.499 mA",
+            "Vd = 2.624 V",
+            "R = 1.05 kΩ",
+            "P = 6.555 mW"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0.6764608775131609,
+            0.6764608775131609
+          ],
+          "current": 0.002498608688082704,
+          "info": [
+            "wire",
+            "I = 2.499 mA",
+            "V = 676.461 mV"
+          ]
+        },
+        {
+          "type": "ResistorElm",
+          "volts": [
+            0.6764608775131609,
+            0
+          ],
+          "current": 0.000006764608775131608,
+          "info": [
+            "resistor",
+            "I = 6.765 μA",
+            "Vd = 676.461 mV",
+            "R = 100 kΩ",
+            "P = 4.576 μW"
+          ]
+        },
+        {
+          "type": "TransistorElm",
+          "volts": [
+            0.6764608775131609,
+            0.06251482774336085,
+            0
+          ],
+          "current": 0,
+          "info": [
+            "transistor (NPN)",
+            "default, β=50",
+            "saturation",
+            "Ic = 18.75 mA",
+            "Ib = 2.492 mA",
+            "Vbe = 676.461 mV",
+            "Vbc = 613.946 mV",
+            "Vce = 62.515 mV",
+            "P = 2.858 mW"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0,
+            0
+          ],
+          "current": 0.02124178476833416,
+          "info": [
+            "wire",
+            "I = 21.242 mA",
+            "V = 0 V"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0,
+            0
+          ],
+          "current": 0.002491844079307602,
+          "info": [
+            "wire",
+            "I = 2.492 mA",
+            "V = 0 V"
+          ]
+        },
+        {
+          "type": "GroundElm",
+          "volts": [
+            0
+          ],
+          "current": -0.000006764608775101759,
+          "info": [
+            "ground",
+            "I = -6.765 μA"
+          ]
+        },
+        {
+          "type": "VoltageElm",
+          "volts": [
+            0,
+            4.75
+          ],
+          "current": 0.018749940689026558,
+          "info": [
+            "voltage source",
+            "I = 18.75 mA",
+            "Vd = 4.75 V",
+            "P = -89.062 mW"
+          ]
+        },
+        {
+          "type": "ResistorElm",
+          "volts": [
+            4.75,
+            0.06251482774336085
+          ],
+          "current": 0.018749940689026554,
+          "info": [
+            "resistor",
+            "I = 18.75 mA",
+            "Vd = 4.687 V",
+            "R = 250 Ω",
+            "P = 87.89 mW"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0.06251482774336085,
+            0.06251482774336085
+          ],
+          "current": 0.018749940689026554,
+          "info": [
+            "wire",
+            "I = 18.75 mA",
+            "V = 62.515 mV"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0,
+            0
+          ],
+          "current": -0.018749940689026558,
+          "info": [
+            "wire",
+            "I = 18.75 mA",
+            "V = 0 V"
+          ]
+        },
+        {
+          "type": "GroundElm",
+          "volts": [
+            0
+          ],
+          "current": 0.000006764608775131608,
+          "info": [
+            "ground",
+            "I = 6.765 μA"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "buzzer-high-supply",
+      "kind": "driver",
+      "simTime": 0.015674999999999464,
+      "elements": [
+        {
+          "type": "VoltageElm",
+          "volts": [
+            0,
+            3.3
+          ],
+          "current": 0.0027588724033198835,
+          "info": [
+            "voltage source",
+            "I = 2.759 mA",
+            "Vd = 3.3 V",
+            "P = -9.104 mW"
+          ]
+        },
+        {
+          "type": "ResistorElm",
+          "volts": [
+            3.3,
+            0.6790712168461105
+          ],
+          "current": 0.0027588724033198835,
+          "info": [
+            "resistor",
+            "I = 2.759 mA",
+            "Vd = 2.621 V",
+            "R = 950 Ω",
+            "P = 7.231 mW"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0.6790712168461105,
+            0.6790712168461105
+          ],
+          "current": 0.0027588724033198835,
+          "info": [
+            "wire",
+            "I = 2.759 mA",
+            "V = 679.071 mV"
+          ]
+        },
+        {
+          "type": "ResistorElm",
+          "volts": [
+            0.6790712168461105,
+            0
+          ],
+          "current": 0.0000067907121684611046,
+          "info": [
+            "resistor",
+            "I = 6.791 μA",
+            "Vd = 679.071 mV",
+            "R = 100 kΩ",
+            "P = 4.611 μW"
+          ]
+        },
+        {
+          "type": "TransistorElm",
+          "volts": [
+            0.6790712168461105,
+            0.0625650922968346,
+            0
+          ],
+          "current": 0,
+          "info": [
+            "transistor (NPN)",
+            "default, β=50",
+            "saturation",
+            "Ic = 20.75 mA",
+            "Ib = 2.752 mA",
+            "Vbe = 679.071 mV",
+            "Vbc = 616.506 mV",
+            "Vce = 62.565 mV",
+            "P = 3.167 mW"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0,
+            0
+          ],
+          "current": 0.02350182132196417,
+          "info": [
+            "wire",
+            "I = 23.502 mA",
+            "V = 0 V"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0,
+            0
+          ],
+          "current": 0.002752081691151511,
+          "info": [
+            "wire",
+            "I = 2.752 mA",
+            "V = 0 V"
+          ]
+        },
+        {
+          "type": "GroundElm",
+          "volts": [
+            0
+          ],
+          "current": -0.000006790712168372459,
+          "info": [
+            "ground",
+            "I = -6.791 μA"
+          ]
+        },
+        {
+          "type": "VoltageElm",
+          "volts": [
+            0,
+            5.25
+          ],
+          "current": 0.02074973963081266,
+          "info": [
+            "voltage source",
+            "I = 20.75 mA",
+            "Vd = 5.25 V",
+            "P = -108.936 mW"
+          ]
+        },
+        {
+          "type": "ResistorElm",
+          "volts": [
+            5.25,
+            0.0625650922968346
+          ],
+          "current": 0.020749739630812662,
+          "info": [
+            "resistor",
+            "I = 20.75 mA",
+            "Vd = 5.187 V",
+            "R = 250 Ω",
+            "P = 107.638 mW"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0.0625650922968346,
+            0.0625650922968346
+          ],
+          "current": 0.020749739630812662,
+          "info": [
+            "wire",
+            "I = 20.75 mA",
+            "V = 62.565 mV"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0,
+            0
+          ],
+          "current": -0.02074973963081266,
+          "info": [
+            "wire",
+            "I = 20.75 mA",
+            "V = 0 V"
+          ]
+        },
+        {
+          "type": "GroundElm",
+          "volts": [
+            0
+          ],
+          "current": 0.0000067907121684611046,
+          "info": [
+            "ground",
+            "I = 6.791 μA"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "button-released",
+      "kind": "button",
+      "simTime": 0.015519999999999453,
+      "elements": [
+        {
+          "type": "VoltageElm",
+          "volts": [
+            0,
+            3.3
+          ],
+          "current": 6.016400160187285e-11,
+          "info": [
+            "voltage source",
+            "I = 60.164 pA",
+            "Vd = 3.3 V",
+            "(R = 54.85 GΩ)",
+            "P = -198.541 pW"
+          ]
+        },
+        {
+          "type": "ResistorElm",
+          "volts": [
+            3.3,
+            3.299999398359984
+          ],
+          "current": 6.016400160291369e-11,
+          "info": [
+            "resistor",
+            "I = 60.164 pA",
+            "Vd = 601.64 nV",
+            "R = 10 kΩ",
+            "P = 0 W"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            3.299999398359984,
+            3.299999398359984
+          ],
+          "current": 6.016400160291369e-11,
+          "info": [
+            "wire",
+            "I = 60.164 pA",
+            "V = 3.3 V"
+          ]
+        },
+        {
+          "type": "SwitchElm",
+          "volts": [
+            3.299999398359984,
+            0
+          ],
+          "current": 0,
+          "info": [
+            "switch (SPST)",
+            "open",
+            "Vd = 3.3 V"
+          ]
+        },
+        {
+          "type": "CapacitorElm",
+          "volts": [
+            3.299999398359984,
+            0
+          ],
+          "current": 6.01639849051594e-11,
+          "info": [
+            "capacitor",
+            "I = 60.164 pA",
+            "Vd = 3.3 V",
+            "C = 100 nF",
+            "P = 198.541 pW",
+            "Q = 330 nC"
+          ]
+        },
+        {
+          "type": "GroundElm",
+          "volts": [
+            0
+          ],
+          "current": 6.01639849051594e-11,
+          "info": [
+            "ground",
+            "I = 60.164 pA"
+          ]
+        },
+        {
+          "type": "GroundElm",
+          "volts": [
+            0
+          ],
+          "current": 0,
+          "info": [
+            "ground",
+            "I = 0 A"
+          ]
+        },
+        {
+          "type": "GroundElm",
+          "volts": [
+            0
+          ],
+          "current": -6.016400160187285e-11,
+          "info": [
+            "ground",
+            "I = -60.164 pA"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "button-pressed",
+      "kind": "button",
+      "simTime": 0.015489999999999454,
+      "elements": [
+        {
+          "type": "VoltageElm",
+          "volts": [
+            0,
+            3.3
+          ],
+          "current": 0.00033,
+          "info": [
+            "voltage source",
+            "I = 330 μA",
+            "Vd = 3.3 V",
+            "(R = 10 kΩ)",
+            "P = -1.089 mW"
+          ]
+        },
+        {
+          "type": "ResistorElm",
+          "volts": [
+            3.3,
+            0
+          ],
+          "current": 0.00033,
+          "info": [
+            "resistor",
+            "I = 330 μA",
+            "Vd = 3.3 V",
+            "R = 10 kΩ",
+            "P = 1.089 mW"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            0,
+            0
+          ],
+          "current": 0.00033,
+          "info": [
+            "wire",
+            "I = 330 μA",
+            "V = 0 V"
+          ]
+        },
+        {
+          "type": "SwitchElm",
+          "volts": [
+            0,
+            0
+          ],
+          "current": 0.00033,
+          "info": [
+            "switch (SPST)",
+            "closed",
+            "V = 0 V",
+            "I = 330 μA"
+          ]
+        },
+        {
+          "type": "CapacitorElm",
+          "volts": [
+            0,
+            0
+          ],
+          "current": 0,
+          "info": [
+            "capacitor",
+            "I = 0 A",
+            "Vd = 0 V",
+            "C = 100 nF",
+            "P = 0 W",
+            "Q = 0 C"
+          ]
+        },
+        {
+          "type": "GroundElm",
+          "volts": [
+            0
+          ],
+          "current": 0,
+          "info": [
+            "ground",
+            "I = 0 A"
+          ]
+        },
+        {
+          "type": "GroundElm",
+          "volts": [
+            0
+          ],
+          "current": 0.00033,
+          "info": [
+            "ground",
+            "I = 330 μA"
+          ]
+        },
+        {
+          "type": "GroundElm",
+          "volts": [
+            0
+          ],
+          "current": -0.00033,
+          "info": [
+            "ground",
+            "I = -330 μA"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "button-low-supply",
+      "kind": "button",
+      "simTime": 0.01558999999999945,
+      "elements": [
+        {
+          "type": "VoltageElm",
+          "volts": [
+            0,
+            3.135
+          ],
+          "current": 1.0661842957983281e-10,
+          "info": [
+            "voltage source",
+            "I = 106.618 pA",
+            "Vd = 3.135 V",
+            "(R = 29.404 GΩ)",
+            "P = -334.249 pW"
+          ]
+        },
+        {
+          "type": "ResistorElm",
+          "volts": [
+            3.135,
+            3.134998880506489
+          ],
+          "current": 1.0661842959825391e-10,
+          "info": [
+            "resistor",
+            "I = 106.618 pA",
+            "Vd = 1.119 μV",
+            "R = 10.5 kΩ",
+            "P = 0 W"
+          ]
+        },
+        {
+          "type": "WireElm",
+          "volts": [
+            3.134998880506489,
+            3.134998880506489
+          ],
+          "current": 1.0661842959825391e-10,
+          "info": [
+            "wire",
+            "I = 106.618 pA",
+            "V = 3.135 V"
+          ]
+        },
+        {
+          "type": "SwitchElm",
+          "volts": [
+            3.134998880506489,
+            0
+          ],
+          "current": 0,
+          "info": [
+            "switch (SPST)",
+            "open",
+            "Vd = 3.135 V"
+          ]
+        },
+        {
+          "type": "CapacitorElm",
+          "volts": [
+            3.134998880506489,
+            0
+          ],
+          "current": 1.0661843630188628e-10,
+          "info": [
+            "capacitor",
+            "I = 106.618 pA",
+            "Vd = 3.135 V",
+            "C = 100 nF",
+            "P = 334.249 pW",
+            "Q = 313.5 nC"
+          ]
+        },
+        {
+          "type": "GroundElm",
+          "volts": [
+            0
+          ],
+          "current": 1.0661843630188628e-10,
+          "info": [
+            "ground",
+            "I = 106.618 pA"
+          ]
+        },
+        {
+          "type": "GroundElm",
+          "volts": [
+            0
+          ],
+          "current": 0,
+          "info": [
+            "ground",
+            "I = 0 A"
+          ]
+        },
+        {
+          "type": "GroundElm",
+          "volts": [
+            0
+          ],
+          "current": -1.0661842957983281e-10,
+          "info": [
+            "ground",
+            "I = -106.618 pA"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "led-on",
+      "kind": "led",
+      "simTime": 0.01585999999999952,
+      "elements": [
+        {
+          "type": "VoltageElm",
+          "volts": [
+            0,
+            3.3
+          ],
+          "current": 0.001687629811142791,
+          "info": [
+            "voltage source",
+            "I = 1.688 mA",
+            "Vd = 3.3 V",
+            "(R = 1.955 kΩ)",
+            "P = -5.569 mW"
+          ]
+        },
+        {
+          "type": "ResistorElm",
+          "volts": [
+            3.3,
+            1.612370188857209
+          ],
+          "current": 0.0016876298111427907,
+          "info": [
+            "resistor",
+            "I = 1.688 mA",
+            "Vd = 1.688 V",
+            "R = 1 kΩ",
+            "P = 2.848 mW"
+          ]
+        },
+        {
+          "type": "LEDElm",
+          "volts": [
+            1.612370188857209,
+            0
+          ],
+          "current": 0.0016876298111427916,
+          "info": [
+            "LED (default-led)",
+            "I = 1.688 mA",
+            "Vd = 1.612 V",
+            "P = 2.721 mW"
+          ]
+        },
+        {
+          "type": "GroundElm",
+          "volts": [
+            0
+          ],
+          "current": 0.0016876298111427916,
+          "info": [
+            "ground",
+            "I = 1.688 mA"
+          ]
+        },
+        {
+          "type": "GroundElm",
+          "volts": [
+            0
+          ],
+          "current": -0.001687629811142791,
+          "info": [
+            "ground",
+            "I = -1.688 mA"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "led-off",
+      "kind": "led",
+      "simTime": 0.015944999999999546,
+      "elements": [
+        {
+          "type": "VoltageElm",
+          "volts": [
+            0,
+            0
+          ],
+          "current": 0,
+          "info": [
+            "voltage source",
+            "I = 0 A",
+            "Vd = 0 V",
+            "P = 0 W"
+          ]
+        },
+        {
+          "type": "ResistorElm",
+          "volts": [
+            0,
+            0
+          ],
+          "current": 0,
+          "info": [
+            "resistor",
+            "I = 0 A",
+            "Vd = 0 V",
+            "R = 1 kΩ",
+            "P = 0 W"
+          ]
+        },
+        {
+          "type": "LEDElm",
+          "volts": [
+            0,
+            0
+          ],
+          "current": 0,
+          "info": [
+            "LED (default-led)",
+            "I = 0 A",
+            "Vd = 0 V",
+            "P = 0 W"
+          ]
+        },
+        {
+          "type": "GroundElm",
+          "volts": [
+            0
+          ],
+          "current": 0,
+          "info": [
+            "ground",
+            "I = 0 A"
+          ]
+        },
+        {
+          "type": "GroundElm",
+          "volts": [
+            0
+          ],
+          "current": 0,
+          "info": [
+            "ground",
+            "I = 0 A"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "led-high-supply",
+      "kind": "led",
+      "simTime": 0.015734999999999482,
+      "elements": [
+        {
+          "type": "VoltageElm",
+          "volts": [
+            0,
+            3.465
+          ],
+          "current": 0.0019361732896749691,
+          "info": [
+            "voltage source",
+            "I = 1.936 mA",
+            "Vd = 3.465 V",
+            "(R = 1.79 kΩ)",
+            "P = -6.709 mW"
+          ]
+        },
+        {
+          "type": "ResistorElm",
+          "volts": [
+            3.465,
+            1.6256353748087793
+          ],
+          "current": 0.001936173289674969,
+          "info": [
+            "resistor",
+            "I = 1.936 mA",
+            "Vd = 1.839 V",
+            "R = 950 Ω",
+            "P = 3.561 mW"
+          ]
+        },
+        {
+          "type": "LEDElm",
+          "volts": [
+            1.6256353748087793,
+            0
+          ],
+          "current": 0.0019361732896749737,
+          "info": [
+            "LED (default-led)",
+            "I = 1.936 mA",
+            "Vd = 1.626 V",
+            "P = 3.148 mW"
+          ]
+        },
+        {
+          "type": "GroundElm",
+          "volts": [
+            0
+          ],
+          "current": 0.0019361732896749737,
+          "info": [
+            "ground",
+            "I = 1.936 mA"
+          ]
+        },
+        {
+          "type": "GroundElm",
+          "volts": [
+            0
+          ],
+          "current": -0.0019361732896749691,
+          "info": [
+            "ground",
+            "I = -1.936 mA"
+          ]
+        }
+      ]
+    }
+  ]
+}

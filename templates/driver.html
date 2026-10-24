@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#F7F8FA">
+  <title>Kalavathi driver</title>
+  <link rel="stylesheet" href="/static/driver.css">
+  <script src="/static/driver-fixtures.js" defer></script>
+  <script src="/static/city-model.js" defer></script>
+  <script src="/static/driver.js" defer></script>
+</head>
+<body>
+  <header class="app-header"><a class="brand" href="/" aria-label="Kalavathi home">kalavathi<span>Care on the way</span></a><div id="demo-slot"></div></header>
+  <div id="connection-banner" class="connection-banner" role="status">Connecting to traffic control…</div>
+  <main id="driver-main">
+    <section id="screen" class="screen" aria-label="Trip status" aria-busy="true"></section>
+    <p id="action-error" class="action-error" role="alert"></p>
+    <details id="mock-panel" class="mock-panel" hidden>
+      <summary>Mock demo controls</summary>
+      <label for="mock-state">Preview state</label>
+      <select id="mock-state"></select>
+      <div class="mock-actions"><button id="mock-prev" type="button">Previous</button><button id="mock-next" type="button">Next</button></div>
+      <button id="mock-offline" type="button">Test offline banner</button>
+    </details>
+  </main>
+  <footer class="device-footer">
+    <button id="device-toggle" type="button" aria-expanded="false" aria-controls="device-details">
+      <span id="connection-dot" class="connection-dot" aria-hidden="true"></span>
+      <span id="footer-device"></span><span id="footer-presses">Presses left —</span>
+      <span class="sr-only" id="connection-label">Connecting</span>
+    </button>
+    <div id="device-details" hidden></div>
+  </footer>
+  <dialog id="hospital-picker" aria-labelledby="picker-title">
+    <div class="picker-heading"><button id="picker-back" type="button">Back</button><h1 id="picker-title">Change hospital</h1></div>
+    <p id="picker-message" role="status"></p><div id="hospital-list"></div>
+  </dialog>
+</body>
+</html>

@@ -1,0 +1,1 @@
+const fs=require('fs');let h=fs.readFileSync('static/hospital.js','utf8').replace("item.status='confirmed';item.trust_tier='hospital_verified';item.severity=data.severity;","item.status='confirmed';item.hospital_confirmed=true;item.trust_tier='hospital_verified';item.severity=data.severity;");fs.writeFileSync('static/hospital.js',h);

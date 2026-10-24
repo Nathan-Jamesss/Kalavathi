@@ -1,0 +1,13 @@
+{
+  "passed": 8,
+  "checks": [
+    "HTTP fallback renders driver state",
+    "Polling remains visibly reconnecting",
+    "Polling does not start a request",
+    "WebSocket reconnect attempted",
+    "WebSocket snapshot updates screen",
+    "Live socket clears reconnect banner",
+    "Two-second hold survives changing live ETA and sends exactly one cancel",
+    "Cancellation renders backend-confirmed expiry"
+  ]
+}

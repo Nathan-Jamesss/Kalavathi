@@ -1,0 +1,26 @@
+return await (async()=>{
+ const checks=[],wait=ms=>new Promise(r=>setTimeout(r,ms)),$=id=>document.getElementById(id);
+ const check=(v,n)=>{if(!v)throw Error(n);checks.push(n);};
+ const inject=kind=>{$('demo-case').value=kind;$('inject').click();};
+ const newest=()=>document.querySelector('.request-card').click();
+ check(!$('hospital-demo').open,'Demo controls closed initially');
+ check($('hospital-view').textContent.includes('No incoming patients'),'Queue starts empty');
+ inject('clean');check(!$('incoming-alert').hidden&&document.title.includes('NEW PATIENT'),'New request banner and title');newest();
+ check($('hospital-view').textContent.includes('CLEAN RECORD'),'Clean record explanation');
+ document.querySelector('[data-action=confirm]').click();$('decision-submit').click();check($('sheet-error').textContent.includes('severity'),'Confirmation requires severity');
+ document.querySelector('input[value=cardiac]').click();$('decision-submit').click();await wait(20);
+ check($('hospital-feedback').textContent.includes('confirmed'),'Confirm success and queue return');
+ newest();check($('hospital-view').textContent.includes('HOSPITAL-VERIFIED'),'Verified trust chip after confirmation');
+ const revoke=document.querySelector('[data-action=revoke]');revoke.dispatchEvent(new KeyboardEvent('keydown',{key:' ',bubbles:true,cancelable:true}));await wait(2200);revoke.dispatchEvent(new KeyboardEvent('keyup',{key:' ',bubbles:true}));check($('decision-sheet').open&&$('decision-title').textContent.includes('Revoke'),'Revoke requires hold and confirmation');$('decision-submit').click();await wait(20);check($('hospital-feedback').textContent.includes('revoked'),'Revoke completes');
+ inject('over');newest();check(document.querySelector('[data-action=confirm]').disabled,'Regular confirm disabled over limit');document.querySelector('[data-action=approve_over_limit]').click();document.querySelector('input[value=trauma]').click();$('decision-submit').click();check($('sheet-error').textContent.includes('reason'),'Over-limit requires reason');document.querySelector('input[name=override-reason]').click();$('decision-submit').click();await wait(20);check($('hospital-feedback').textContent.includes('Over-limit'),'Over-limit approval succeeds');
+ inject('bad');newest();check($('hospital-view').textContent.includes('UNCONFIRMED CLAIMS ON RECORD'),'Bad record flagged');$('queue-tab').click();
+ inject('invalid');newest();check([...document.querySelectorAll('[data-action]')].every(b=>b.disabled),'Invalid signature disables all decisions');$('queue-tab').click();
+ inject('clean');newest();document.querySelector('[data-action=redirect]').click();await wait(30);const options=document.querySelectorAll('.sheet-hospitals button');check(options.length===2&&options[1].disabled,'Unavailable redirect destination disabled');options[0].click();$('redirect-reason').value='Cardiac team unavailable';$('decision-submit').click();check($('decision-title').textContent.includes('Redirect to Riverside'),'Redirect has final confirmation');$('decision-submit').click();await wait(20);check($('hospital-feedback').textContent.includes('redirected'),'Redirect success');
+ inject('clean');newest();document.querySelector('[data-action=confirm]').click();inject('cancelled');check(!$('decision-sheet').open&&[...document.querySelectorAll('[data-action]')].every(b=>b.disabled),'Driver cancellation closes decision and disables actions');$('queue-tab').click();
+ inject('redirected');newest();check($('hospital-view').textContent.includes('Redirected from Riverside'),'Redirected-in source label');$('offline-demo').click();check([...document.querySelectorAll('[data-action]')].every(b=>b.disabled)&&!$('hospital-connection').hidden,'Offline banner and disabled actions');$('offline-demo').click();
+ $('history-tab').click();check($('hospital-view').textContent.includes('Over-limit request approved')&&$('hospital-view').textContent.includes('Patient redirected'),'Session decision history');
+ check(document.documentElement.scrollWidth<=innerWidth,'No horizontal scroll');
+ check([...document.querySelectorAll('button')].filter(n=>n.getClientRects().length).every(n=>n.getBoundingClientRect().height>=56),'Visible touch controls >=56px');
+ check(!document.querySelector('script[src^="http"],link[href^="http"]'),'No external assets');$('queue-tab').click();
+ return JSON.stringify({passed:checks.length,checks},null,2);
+})();

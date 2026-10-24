@@ -1,0 +1,21 @@
+Net,Endpoints,Condition
+BTN_EMERGENCY,"U1.GPIO25;S1.NO;R1.2;C1.1",S1 momentary dry contact or firmware adapted to latching
+BTN_RESET,"U1.GPIO26;S2.1;R2.2;C2.1",Demo reset input only
++3V3,"U1.3V3;R1.1;R2.1",Regulated logic rail
+GND,"U1.GND;S1.COM;S2.2;C1.2;C2.2;D1.K;D2.K;D3.K;U2.GND;C3.2;C4.negative;Q1.E;R7.2;C5.2",Common ground
+LED_RED,"U1.GPIO27;R3.1",R3=1k
+RED_ANODE,"R3.2;D1.A",Individual red LED
+LED_AMBER,"U1.GPIO32;R4.1",R4=1k
+AMBER_ANODE,"R4.2;D2.A",Individual amber LED
+LED_GREEN,"U1.GPIO33;R5.1",R5=1k
+GREEN_ANODE,"R5.2;D3.A",Individual green LED
+GPS_TX_RAW,"U2.TX;R8.1",Verify 3.3V UART level
+GPS_RX,"R8.2;U1.GPIO16",R8=1k series; NOT a level shifter
+VGPS,"U2.VCC;C3.1;C4.positive;U1.VIN",USB-derived 5V to regulated GY-NEO6MV2 breakout input only
+GPS_RF,"U2.RF;ANT1.coax",Matching RF connector; antenna bias compatibility verified
+BUZZER_DRIVE,"U1.GPIO23;R6.1",R6=1k
+Q1_BASE,"R6.2;Q1.B;R7.1",R7=100k
+BZ_LOW,"Q1.C;BZ1.minus;D4.A",Q1=2N3904; verify package EBC
+VBUZZ,"BZ1.plus;D4.K;C5.1",Verified USB_5V only for 5V <=20mA reference active sounder
+USB_5V,"U1.VIN;VGPS;VBUZZ",Measure VIN with USB connected; no external power source
+UNCONNECTED,"U2.RX;U2.PPS;U1.GPIO17",No physical GPS configuration/TX wire in first build

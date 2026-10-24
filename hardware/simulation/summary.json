@@ -1,0 +1,77 @@
+[
+  {
+    "case": "buzzer-on",
+    "pass": true,
+    "load_mA": 19.758344729596292,
+    "control_mA": 2.6217045610846403,
+    "vce_V": 0.06041381760092699
+  },
+  {
+    "case": "buzzer-off",
+    "pass": true,
+    "load_mA": 1.0200000843951784e-8,
+    "control_mA": -5.049504942727499e-9,
+    "vce_V": 4.99999999745
+  },
+  {
+    "case": "buzzer-low-gain",
+    "pass": true,
+    "load_mA": 19.749586841253766,
+    "control_mA": 2.62221480943867,
+    "vce_V": 0.06260328968655848
+  },
+  {
+    "case": "buzzer-high-gain",
+    "pass": true,
+    "load_mA": 19.763799506382878,
+    "control_mA": 2.621359303408283,
+    "vce_V": 0.05905012340428104
+  },
+  {
+    "case": "buzzer-low-supply",
+    "pass": true,
+    "load_mA": 18.749940689026555,
+    "control_mA": 2.498608688082704,
+    "vce_V": 0.06251482774336085
+  },
+  {
+    "case": "buzzer-high-supply",
+    "pass": true,
+    "load_mA": 20.749739630812662,
+    "control_mA": 2.7588724033198835,
+    "vce_V": 0.0625650922968346
+  },
+  {
+    "case": "button-released",
+    "pass": true,
+    "input_V": 3.299999398359984,
+    "pullup_mA": 6.01640016029137e-8
+  },
+  {
+    "case": "button-pressed",
+    "pass": true,
+    "input_V": 0,
+    "pullup_mA": 0.33
+  },
+  {
+    "case": "button-low-supply",
+    "pass": true,
+    "input_V": 3.134998880506489,
+    "pullup_mA": 1.0661842959825391e-7
+  },
+  {
+    "case": "led-on",
+    "pass": true,
+    "current_mA": 1.6876298111427908
+  },
+  {
+    "case": "led-off",
+    "pass": true,
+    "current_mA": 0
+  },
+  {
+    "case": "led-high-supply",
+    "pass": true,
+    "current_mA": 1.9361732896749688
+  }
+]

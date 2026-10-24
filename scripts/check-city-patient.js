@@ -1,0 +1,5 @@
+return await(async()=>{
+ const wait=ms=>new Promise(r=>setTimeout(r,ms));await wait(800);const map=document.querySelector('.patient-route'),screen=document.getElementById('driver-main');
+ const state=await(await fetch('/api/driver/kalavathi-01/state')).json(),checks=[];function check(v,n){if(!v)throw Error(n);checks.push(n);}
+ check(!!map,'Hospital-confirmed patient sees the route map');check(map===screen.querySelector('.screen')?.firstElementChild||map.parentElement.firstElementChild===map,'Route map is the first trip content');check(map.querySelector('svg').getAttribute('aria-label').includes(state.route.ids.join(', ')),'Phone map uses the same junction path as traffic');check(map.textContent.includes('DESTINATION'),'Destination hospital is marked on map');check(map.textContent.includes('YOUR CAR'),'Patient car is marked');check(document.documentElement.scrollWidth<=innerWidth,'Phone page has no horizontal overflow');check(!document.getElementById('confirm-hospital'),'No redundant patient confirmation button');return JSON.stringify({passed:checks.length,checks},null,2);
+})();

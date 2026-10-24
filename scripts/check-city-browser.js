@@ -1,0 +1,13 @@
+return await(async()=>{
+ const checks=[],wait=ms=>new Promise(r=>setTimeout(r,ms)),check=(v,n)=>{if(!v)throw Error(n);checks.push(n);};
+ async function post(path,body={}){const r=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}),d=await r.json();if(!r.ok)throw Error(path+': '+d.error);return d;}
+ await fetch('/driver/kalavathi-01?demo=1');await fetch('/hospital/city');await fetch('/hospital/riverside');
+ await post('/api/traffic/reset');await post('/api/demo/request',{request_id:'city-browser-'+Date.now()});
+ let state=await(await fetch('/api/driver/kalavathi-01/state')).json();check(state.trust_tier==='self_declared','Device token waits for hospital confirmation');
+ const before=state.route.ids.join(',');await post('/api/driver/kalavathi-01/destination',{hospital_id:'riverside'});state=await(await fetch('/api/driver/kalavathi-01/state')).json();check(state.route.ids.join(',')!==before,'Changing hospital changes the route and destination junction');
+ await post('/api/driver/kalavathi-01/destination',{hospital_id:'city'});state=await(await fetch('/api/driver/kalavathi-01/state')).json();await post('/api/hospital/city/requests/'+state.request_id+'/confirm',{severity:'cardiac'});
+ for(let i=0;i<30;i++){await wait(200);if(window.KalavathiDemo?.engine.route.hospital_id==='city'&&window.KalavathiDemo.engine.patient.d>0)break;}
+ await wait(1200);const e=KalavathiDemo.engine;check(e.patient.d>0,'Hospital confirmation starts the shared priority journey');check(KalavathiCity.nodes.length===16,'City contains sixteen signal junctions');check(e.cars.filter(c=>!c.patient&&c.d>0).length>35,'Ordinary traffic is visible across the city');check(e.route.ids.length>4,'City Hospital route crosses more than four junctions');check(document.querySelector('canvas').width>1000,'City canvas is large');check(document.querySelectorAll('#k-junctions li').length===e.route.ids.length,'Progress lists only the selected route junctions');
+ KalavathiDemo.pause();KalavathiDemo.advance(32);await wait(1200);state=await(await fetch('/api/driver/kalavathi-01/state')).json();check(state.vehicle.x>0&&state.junctions.some(j=>j.state==='passed'),'Patient receives actual model position and passed junctions');check(state.comparison.baseline_s>0,'Comparison uses a completed baseline model run');check(state.comparison.saved_s!==null,'Saving is measured at a cleared junction');check(state.route.ids.join(',')===e.route.ids.join(','),'Patient and traffic share identical route');
+ return JSON.stringify({passed:checks.length,checks,route:e.route.ids,comparison:state.comparison},null,2);
+})();

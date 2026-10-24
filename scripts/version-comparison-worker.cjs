@@ -1,0 +1,1 @@
+const fs=require('fs');for(const file of ['server.js','static/digital-twin/kalavathi-screen.js','test/connected-http.test.js']){let text=fs.readFileSync(file,'utf8').replaceAll("'kalavathi-p1'","'kalavathi-p1-v2'");fs.writeFileSync(file,text);}

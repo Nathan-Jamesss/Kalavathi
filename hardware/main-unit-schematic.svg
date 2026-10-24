@@ -1,0 +1,291 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1510" viewBox="0 0 1800 1510"><style>text{font-family:Segoe UI,Arial,sans-serif}</style><rect width="1800" height="1510" fill="#f2f6fa"/>
+<text x="40" y="48" font-size="34" fill="#19334b" font-weight="700">Kalavathi main button unit</text>
+<text x="40" y="80" font-size="21" fill="#19334b" font-weight="400">Photographed ESP32 30-pin board • Revision B • No secure element • Hardware set 1 only</text>
+<rect x="40" y="100" width="1720" height="45" rx="5" fill="#fff4d8" stroke="#dbac45" stroke-width="1.5"/>
+<text x="55" y="129" font-size="19" fill="#76520a" font-weight="600">Use the large micro-USB ESP32 board. GPS: regulated 5 V breakout input. Fit BZ1 only after verifying its 5 V / 20 mA rating.</text>
+<rect x="40" y="170" width="500" height="600" rx="5" fill="#fff" stroke="#b7c9d9" stroke-width="1.5"/>
+<text x="60" y="203" font-size="23" fill="#19334b" font-weight="650">U1  ESP32 30-pin development board</text>
+<rect x="75" y="235" width="205" height="465" rx="5" fill="#edf4fb" stroke="#6b94bb" stroke-width="1.5"/>
+<text x="95" y="270" font-size="19" fill="#19334b" font-weight="650">Development board</text>
+<text x="92" y="311" font-size="18" fill="#19334b" font-weight="400">D25 / GPIO25</text>
+<path d="M240 305 L305 305" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<circle cx="305" cy="305" r="4" fill="white" stroke="#234c70" stroke-width="2"/>
+<text x="310" y="293" font-size="17" fill="#165c9e" font-weight="600">BTN_EMERGENCY</text>
+<text x="92" y="351" font-size="18" fill="#19334b" font-weight="400">D26 / GPIO26</text>
+<path d="M240 345 L305 345" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<circle cx="305" cy="345" r="4" fill="white" stroke="#234c70" stroke-width="2"/>
+<text x="310" y="333" font-size="17" fill="#165c9e" font-weight="600">BTN_RESET</text>
+<text x="92" y="391" font-size="18" fill="#19334b" font-weight="400">D27 / GPIO27</text>
+<path d="M240 385 L305 385" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<circle cx="305" cy="385" r="4" fill="white" stroke="#234c70" stroke-width="2"/>
+<text x="310" y="373" font-size="17" fill="#165c9e" font-weight="600">LED_RED</text>
+<text x="92" y="431" font-size="18" fill="#19334b" font-weight="400">D32 / GPIO32</text>
+<path d="M240 425 L305 425" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<circle cx="305" cy="425" r="4" fill="white" stroke="#234c70" stroke-width="2"/>
+<text x="310" y="413" font-size="17" fill="#165c9e" font-weight="600">LED_AMBER</text>
+<text x="92" y="471" font-size="18" fill="#19334b" font-weight="400">D33 / GPIO33</text>
+<path d="M240 465 L305 465" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<circle cx="305" cy="465" r="4" fill="white" stroke="#234c70" stroke-width="2"/>
+<text x="310" y="453" font-size="17" fill="#165c9e" font-weight="600">LED_GREEN</text>
+<text x="92" y="511" font-size="18" fill="#19334b" font-weight="400">RX2 / GPIO16</text>
+<path d="M240 505 L305 505" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<circle cx="305" cy="505" r="4" fill="white" stroke="#234c70" stroke-width="2"/>
+<text x="310" y="493" font-size="17" fill="#165c9e" font-weight="600">GPS_RX</text>
+<text x="92" y="551" font-size="18" fill="#19334b" font-weight="400">D23 / GPIO23</text>
+<path d="M240 545 L305 545" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<circle cx="305" cy="545" r="4" fill="white" stroke="#234c70" stroke-width="2"/>
+<text x="310" y="533" font-size="17" fill="#165c9e" font-weight="600">BUZZER_DRIVE</text>
+<text x="92" y="591" font-size="18" fill="#19334b" font-weight="400">3V3</text>
+<path d="M240 585 L305 585" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<circle cx="305" cy="585" r="4" fill="white" stroke="#234c70" stroke-width="2"/>
+<text x="310" y="573" font-size="17" fill="#165c9e" font-weight="600">+3V3</text>
+<text x="92" y="631" font-size="18" fill="#19334b" font-weight="400">VIN (USB)</text>
+<path d="M240 625 L305 625" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<circle cx="305" cy="625" r="4" fill="white" stroke="#234c70" stroke-width="2"/>
+<text x="310" y="613" font-size="17" fill="#165c9e" font-weight="600">USB_5V</text>
+<text x="95" y="680" font-size="18" fill="#19334b" font-weight="400">GND</text>
+<path d="M185 685 L185 708" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M185 708 L185 718" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M171 718 L199 718" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M176 724 L194 724" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M181 730 L189 730" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<text x="65" y="751" font-size="17" fill="#19334b" font-weight="400">TX2 / GPIO17 unused; EN unchanged.</text>
+<rect x="565" y="170" width="575" height="270" rx="5" fill="#fff" stroke="#b7c9d9" stroke-width="1.5"/>
+<text x="585" y="203" font-size="23" fill="#19334b" font-weight="650">USB power and board supplies</text>
+<rect x="590" y="235" width="140" height="60" rx="5" fill="#edf4fb" stroke="#b7c9d9" stroke-width="1.5"/>
+<text x="607" y="270" font-size="20" fill="#19334b" font-weight="400">Laptop USB</text>
+<path d="M730 265 L800 265" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<rect x="800" y="235" width="305" height="60" rx="5" fill="#edf4fb" stroke="#b7c9d9" stroke-width="1.5"/>
+<text x="815" y="270" font-size="17" fill="#19334b" font-weight="400">U1 USB connector / onboard LDO</text>
+<text x="590" y="335" font-size="18" fill="#19334b" font-weight="400">USB_5V = VIN rail; measure with USB connected.</text>
+<text x="590" y="365" font-size="18" fill="#19334b" font-weight="400">+3V3 = onboard regulated logic supply.</text>
+<text x="590" y="400" font-size="18" fill="#76520a" font-weight="600">Use USB as the only board power source.</text>
+<rect x="1165" y="170" width="595" height="600" rx="5" fill="#fff" stroke="#b7c9d9" stroke-width="1.5"/>
+<text x="1185" y="203" font-size="23" fill="#19334b" font-weight="650">U2  NEO-6M GPS + ANT1 antenna</text>
+<rect x="1270" y="255" width="265" height="285" rx="5" fill="#edf4fb" stroke="#6b94bb" stroke-width="1.5"/>
+<text x="1290" y="290" font-size="22" fill="#19334b" font-weight="650">GPS breakout</text>
+<circle cx="1195" cy="330" r="4" fill="white" stroke="#234c70" stroke-width="2"/>
+<text x="1200" y="318" font-size="17" fill="#165c9e" font-weight="600">VGPS</text>
+<path d="M1195 330 L1270 330" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<text x="1290" y="336" font-size="18" fill="#19334b" font-weight="400">VCC</text>
+<text x="1290" y="386" font-size="18" fill="#19334b" font-weight="400">GND</text>
+<path d="M1270 380 L1235 380" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1235 380 L1235 390" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1221 390 L1249 390" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1226 396 L1244 396" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1231 402 L1239 402" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<text x="1290" y="436" font-size="18" fill="#19334b" font-weight="400">TX (3.3 V logic)</text>
+<path d="M1535 430 L1570 430" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1570 430 L1582 430" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<rect x="1582" y="422" width="50" height="16" rx="5" fill="white" stroke="#b7c9d9" stroke-width="1.5"/>
+<path d="M1632 430 L1650 430" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<text x="1578" y="410" font-size="16" fill="#19334b" font-weight="400">R8 1k</text>
+<path d="M1650 430 L1690 430" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<circle cx="1570" cy="480" r="4" fill="white" stroke="#234c70" stroke-width="2"/>
+<text x="1575" y="468" font-size="17" fill="#165c9e" font-weight="600">GPS_RX</text>
+<path d="M1690 430 L1690 480" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1690 480 L1570 480" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<text x="1290" y="490" font-size="16" fill="#19334b" font-weight="400">RX / PPS: no connection</text>
+<path d="M1400 255 L1400 225" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<rect x="1335" y="210" width="130" height="30" rx="5" fill="white" stroke="#b7c9d9" stroke-width="1.5"/>
+<text x="1351" y="231" font-size="16" fill="#19334b" font-weight="400">RF coax</text>
+<path d="M1465 225 L1515 225" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<rect x="1515" y="205" width="210" height="60" rx="5" fill="#edf4fb" stroke="#b7c9d9" stroke-width="1.5"/>
+<text x="1530" y="231" font-size="18" fill="#19334b" font-weight="400">ANT1 GPS patch</text>
+<text x="1530" y="252" font-size="14" fill="#19334b" font-weight="400">Radiating face to sky</text>
+<circle cx="1195" cy="580" r="4" fill="white" stroke="#234c70" stroke-width="2"/>
+<text x="1200" y="568" font-size="17" fill="#165c9e" font-weight="600">VGPS</text>
+<path d="M1195 580 L1550 580" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1280 580 L1280 600" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1267 600 L1293 600" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1267 608 L1293 608" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1280 608 L1280 629" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<text x="1300" y="609" font-size="16" fill="#19334b" font-weight="400">C3 100nF</text>
+<path d="M1510 580 L1510 600" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1497 600 L1523 600" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1497 608 L1523 608" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1510 608 L1510 629" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<text x="1530" y="609" font-size="16" fill="#19334b" font-weight="400">C4 10uF</text>
+<path d="M1280 629 L1280 639" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1266 639 L1294 639" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1271 645 L1289 645" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1276 651 L1284 651" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1510 629 L1510 639" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1496 639 L1524 639" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1501 645 L1519 645" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1506 651 L1514 651" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<text x="1190" y="692" font-size="18" fill="#76520a" font-weight="600">VGPS = USB_5V to GY-NEO6MV2 VCC input.</text>
+<text x="1190" y="720" font-size="18" fill="#76520a" font-weight="600">Onboard regulator supplies the 3.3 V GPS chip.</text>
+<text x="1190" y="748" font-size="17" fill="#76520a" font-weight="400">Never apply 5 V to the bare GPS chip or GPIO.</text>
+<rect x="565" y="465" width="575" height="305" rx="5" fill="#fff" stroke="#b7c9d9" stroke-width="1.5"/>
+<text x="585" y="498" font-size="23" fill="#19334b" font-weight="650">S1 / S2  Active-low button inputs</text>
+<text x="590" y="535" font-size="18" fill="#19334b" font-weight="650">S1 Emergency</text>
+<circle cx="615" cy="560" r="4" fill="white" stroke="#234c70" stroke-width="2"/>
+<text x="620" y="548" font-size="17" fill="#165c9e" font-weight="600">+3V3</text>
+<path d="M615 575 L615 587" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<rect x="607" y="587" width="16" height="48" rx="5" fill="white" stroke="#b7c9d9" stroke-width="1.5"/>
+<path d="M615 635 L615 653" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<text x="633" y="612" font-size="16" fill="#19334b" font-weight="400">R1 10k</text>
+<path d="M615 560 L615 575" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M615 653 L615 670" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<circle cx="615" cy="670" r="4" fill="#234c70"/>
+<path d="M615 670 L665 670" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<circle cx="665" cy="670" r="4" fill="white" stroke="#234c70" stroke-width="2"/>
+<text x="670" y="658" font-size="17" fill="#165c9e" font-weight="600">BTN_EMERGENCY</text>
+<path d="M615 670 L615 688" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<circle cx="615" cy="688" r="3" fill="white" stroke="#234c70"/><circle cx="615" cy="719" r="3" fill="white" stroke="#234c70"/>
+<path d="M615 688 L632 713" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M615 719 L615 730" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M615 730 L615 740" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M601 740 L629 740" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M606 746 L624 746" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M611 752 L619 752" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<text x="870" y="535" font-size="18" fill="#19334b" font-weight="650">S2 Demo reset</text>
+<circle cx="895" cy="560" r="4" fill="white" stroke="#234c70" stroke-width="2"/>
+<text x="900" y="548" font-size="17" fill="#165c9e" font-weight="600">+3V3</text>
+<path d="M895 575 L895 587" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<rect x="887" y="587" width="16" height="48" rx="5" fill="white" stroke="#b7c9d9" stroke-width="1.5"/>
+<path d="M895 635 L895 653" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<text x="913" y="612" font-size="16" fill="#19334b" font-weight="400">R2 10k</text>
+<path d="M895 560 L895 575" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M895 653 L895 670" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<circle cx="895" cy="670" r="4" fill="#234c70"/>
+<path d="M895 670 L945 670" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<circle cx="945" cy="670" r="4" fill="white" stroke="#234c70" stroke-width="2"/>
+<text x="950" y="658" font-size="17" fill="#165c9e" font-weight="600">BTN_RESET</text>
+<path d="M895 670 L895 688" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<circle cx="895" cy="688" r="3" fill="white" stroke="#234c70"/><circle cx="895" cy="719" r="3" fill="white" stroke="#234c70"/>
+<path d="M895 688 L912 713" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M895 719 L895 730" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M895 730 L895 740" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M881 740 L909 740" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M886 746 L904 746" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M891 752 L899 752" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<rect x="40" y="795" width="675" height="420" rx="5" fill="#fff" stroke="#b7c9d9" stroke-width="1.5"/>
+<text x="60" y="828" font-size="23" fill="#19334b" font-weight="650">D1 / D2 / D3  Three status indicators</text>
+<circle cx="65" cy="895" r="4" fill="white" stroke="#234c70" stroke-width="2"/>
+<text x="70" y="883" font-size="17" fill="#165c9e" font-weight="600">LED_RED</text>
+<path d="M65 895 L245 895" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M245 895 L257 895" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<rect x="257" y="887" width="50" height="16" rx="5" fill="white" stroke="#b7c9d9" stroke-width="1.5"/>
+<path d="M307 895 L325 895" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<text x="253" y="875" font-size="16" fill="#19334b" font-weight="400">R3 1k</text>
+<path d="M325 895 L350 895" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M350 882 L350 908 L375 895 Z" fill="#e64f5b" stroke="#234c70" stroke-width="2"/>
+<path d="M378 880 L378 910" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M378 895 L425 895" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M425 895 L425 905" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M411 905 L439 905" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M416 911 L434 911" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M421 917 L429 917" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M375 873 L395 855" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M390 872 L410 854" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M395 855 L387 858 L392 863 Z M410 854 L402 857 L407 862 Z" fill="#234c70"/>
+<text x="455" y="900" font-size="18" fill="#19334b" font-weight="400">D1 Refused</text>
+<circle cx="65" cy="995" r="4" fill="white" stroke="#234c70" stroke-width="2"/>
+<text x="70" y="983" font-size="17" fill="#165c9e" font-weight="600">LED_AMBER</text>
+<path d="M65 995 L245 995" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M245 995 L257 995" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<rect x="257" y="987" width="50" height="16" rx="5" fill="white" stroke="#b7c9d9" stroke-width="1.5"/>
+<path d="M307 995 L325 995" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<text x="253" y="975" font-size="16" fill="#19334b" font-weight="400">R4 1k</text>
+<path d="M325 995 L350 995" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M350 982 L350 1008 L375 995 Z" fill="#efb42f" stroke="#234c70" stroke-width="2"/>
+<path d="M378 980 L378 1010" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M378 995 L425 995" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M425 995 L425 1005" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M411 1005 L439 1005" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M416 1011 L434 1011" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M421 1017 L429 1017" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M375 973 L395 955" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M390 972 L410 954" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M395 955 L387 958 L392 963 Z M410 954 L402 957 L407 962 Z" fill="#234c70"/>
+<text x="455" y="1000" font-size="18" fill="#19334b" font-weight="400">D2 Pending</text>
+<circle cx="65" cy="1095" r="4" fill="white" stroke="#234c70" stroke-width="2"/>
+<text x="70" y="1083" font-size="17" fill="#165c9e" font-weight="600">LED_GREEN</text>
+<path d="M65 1095 L245 1095" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M245 1095 L257 1095" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<rect x="257" y="1087" width="50" height="16" rx="5" fill="white" stroke="#b7c9d9" stroke-width="1.5"/>
+<path d="M307 1095 L325 1095" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<text x="253" y="1075" font-size="16" fill="#19334b" font-weight="400">R5 1k</text>
+<path d="M325 1095 L350 1095" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M350 1082 L350 1108 L375 1095 Z" fill="#2ba874" stroke="#234c70" stroke-width="2"/>
+<path d="M378 1080 L378 1110" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M378 1095 L425 1095" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M425 1095 L425 1105" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M411 1105 L439 1105" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M416 1111 L434 1111" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M421 1117 L429 1117" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M375 1073 L395 1055" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M390 1072 L410 1054" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M395 1055 L387 1058 L392 1063 Z M410 1054 L402 1057 L407 1062 Z" fill="#234c70"/>
+<text x="455" y="1100" font-size="18" fill="#19334b" font-weight="400">D3 Granted</text>
+<text x="65" y="1170" font-size="18" fill="#19334b" font-weight="400">Anode toward resistor; cathode toward GND.</text>
+<rect x="740" y="795" width="1020" height="420" rx="5" fill="#fff" stroke="#b7c9d9" stroke-width="1.5"/>
+<text x="760" y="828" font-size="23" fill="#19334b" font-weight="650">Q1 / BZ1  Transistor-driven feedback buzzer</text>
+<text x="765" y="865" font-size="18" fill="#76520a" font-weight="600">Reference: rated 5 V active buzzer, ≤20 mA. Verify your existing sounder first.</text>
+<circle cx="1220" cy="900" r="4" fill="white" stroke="#234c70" stroke-width="2"/>
+<text x="1225" y="888" font-size="17" fill="#165c9e" font-weight="600">VBUZZ</text>
+<path d="M1220 900 L1450 900" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1280 900 L1280 930" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<rect x="1235" y="930" width="90" height="65" rx="5" fill="#edf4fb" stroke="#6b94bb" stroke-width="1.5"/>
+<text x="1245" y="954" font-size="18" fill="#19334b" font-weight="400">BZ1 +</text>
+<text x="1245" y="980" font-size="18" fill="#19334b" font-weight="400">−</text>
+<path d="M1280 995 L1280 1030" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<circle cx="1280" cy="1030" r="4" fill="#234c70"/>
+<path d="M1280 1030 L1450 1030" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1450 900 L1450 935" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1435 935 L1465 935" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1450 938 L1437 966 L1463 966 Z" fill="white" stroke="#234c70" stroke-width="2"/>
+<path d="M1450 966 L1450 1030" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<text x="1480" y="950" font-size="18" fill="#19334b" font-weight="400">D4 1N4148</text>
+<text x="1480" y="977" font-size="16" fill="#19334b" font-weight="400">Band/cathode to VBUZZ</text>
+<circle cx="765" cy="1095" r="4" fill="white" stroke="#234c70" stroke-width="2"/>
+<text x="770" y="1083" font-size="17" fill="#165c9e" font-weight="600">BUZZER_DRIVE</text>
+<path d="M765 1095 L980 1095" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M980 1095 L992 1095" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<rect x="992" y="1087" width="50" height="16" rx="5" fill="white" stroke="#b7c9d9" stroke-width="1.5"/>
+<path d="M1042 1095 L1060 1095" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<text x="988" y="1075" font-size="16" fill="#19334b" font-weight="400">R6 1k</text>
+<path d="M1060 1095 L1215 1095" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<circle cx="1100" cy="1095" r="4" fill="#234c70"/>
+<path d="M1215 1060 L1215 1130" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1215 1078 L1280 1040" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1280 1030 L1280 1040" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1215 1110 L1280 1150" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1280 1150 L1280 1170" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1280 1170 L1280 1180" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1266 1180 L1294 1180" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1271 1186 L1289 1186" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1276 1192 L1284 1192" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1268 1143 L1255 1124 L1248 1137 Z" fill="#234c70"/>
+<text x="1300" y="1110" font-size="19" fill="#19334b" font-weight="400">Q1 2N3904 NPN</text>
+<text x="1300" y="1140" font-size="17" fill="#19334b" font-weight="400">Check E / B / C package pinout</text>
+<path d="M1100 1100 L1100 1112" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<rect x="1092" y="1112" width="16" height="48" rx="5" fill="white" stroke="#b7c9d9" stroke-width="1.5"/>
+<path d="M1100 1160 L1100 1178" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<text x="1118" y="1137" font-size="16" fill="#19334b" font-weight="400">R7 100k</text>
+<path d="M1100 1178 L1100 1188" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1086 1188 L1114 1188" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1091 1194 L1109 1194" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1096 1200 L1104 1200" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<circle cx="1580" cy="1050" r="4" fill="white" stroke="#234c70" stroke-width="2"/>
+<text x="1585" y="1038" font-size="17" fill="#165c9e" font-weight="600">VBUZZ</text>
+<path d="M1580 1070 L1580 1090" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1567 1090 L1593 1090" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1567 1098 L1593 1098" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1580 1098 L1580 1119" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<text x="1600" y="1099" font-size="16" fill="#19334b" font-weight="400">C5 100nF</text>
+<path d="M1580 1050 L1580 1070" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1580 1119 L1580 1129" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1566 1129 L1594 1129" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1571 1135 L1589 1135" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<path d="M1576 1141 L1584 1141" fill="none" stroke="#234c70" stroke-width="2.2"/>
+<rect x="40" y="1240" width="1720" height="230" rx="5" fill="#fff" stroke="#b7c9d9" stroke-width="1.5"/>
+<text x="60" y="1273" font-size="23" fill="#19334b" font-weight="650">Assembly notes and document alignment</text>
+<text x="65" y="1300" font-size="20" fill="#19334b" font-weight="400">Optional C1/C2: 100 nF from each button input to GND. R1/R2 pull-ups remain fitted; debounce is also required in firmware.</text>
+<text x="65" y="1338" font-size="20" fill="#19334b" font-weight="400">VBUZZ = verified USB_5V only for the specified 5 V sounder. All GND symbols are connected. No vehicle power connection.</text>
+<text x="65" y="1376" font-size="20" fill="#19334b" font-weight="400">GPS: UART2, 9600 8N1 initially; RX2 / GPIO16 receives GPS TX. ANT1 connects only to GPS. Indoors use simulated position.</text>
+<text x="65" y="1414" font-size="20" fill="#76520a" font-weight="600">The existing firmware still needs GPS, long-press handling and this buzzer driver added. Circuit not physically tested.</text>
+<text x="65" y="1448" font-size="18" fill="#19334b" font-weight="400">Companion specification: MAIN_UNIT_DESIGN.md • Pin-level netlist: main-unit-netlist.csv • No Nano/Uno inside this unit.</text>
+</svg>
